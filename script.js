@@ -1,107 +1,76 @@
-var queryUrl = "https://api.themoviedb.org/3/trending/all/day?api_key=9bfe03956c9070cdbcee94fe9384e956"
+// Main function
+// Location is pulled and weather is taken
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    console.log(lat)
+    console.log(lon)
+}
+
+getLocation();
+
+var weatherURL = ""
+var genreString = ""
 
 $.ajax({
-    url: queryUrl,
-    method: "GET"
+    url: weatherURL,
+    method: "GET",
 }).then(function (response) {
-    console.log(response)
+    // A weather category is displayed, and we bank that data into a var
+    console.log(response);
+    var weatherCat = ""
+    console.log(weatherCat)
+    if (weatherCat === "sunny") {
+        genreString = "28%2C35%2C37"
+    }
+    else if (weatherCat === "cloudy") {
+        genreString = "12%2C16%2C18%2C36"
+    }
+    else if (weatherCat === "raining") {
+        genreString = "80%2C99%2C10749"
+    }
+    else () => {
+        genreString = "14%2C878%2C37"
+    }
 })
 
-// {
-// "genres": [
-//     {
-//         "id": 28,
-//         "name": "Action"
-            // If sunny
-//     },
-//     {
-//         "id": 12,
-//         "name": "Adventure"
-            // If cloudy
-//     },
-//     {
-//         "id": 16,
-//         "name": "Animation"
-            // If cloudy
-//     },
-//     {
-//         "id": 35,
-//         "name": "Comedy"
-            // If sunny
-//     },
-//     {
-//         "id": 80,
-//         "name": "Crime"
-            // If rainy 
-//     },
-//     {
-//         "id": 99,
-//         "name": "Documentary"
-            // If rainy
-//     },
-//     {
-//         "id": 18,
-//         "name": "Drama"
-            // if cloudy
-//     },
-//     {
-//         "id": 10751,
-//         "name": "Family"
-            // If cold
-//     },
-//     {
-//         "id": 14,
-//         "name": "Fantasy"
-            // if else
-//     },
-//     {
-//         "id": 36,
-//         "name": "History"
-            // if cloudy
-//     },
-//     {
-//         "id": 27,
-//         "name": "Horror"
-            // If past 9pm or if rainy
-//     },
-//     {
-//         "id": 10402,
-//         "name": "Music"
-            // If snowing
-//     },
-//     {
-//         "id": 9648,
-//         "name": "Mystery"
-            // If cloudy
-//     },
-//     {
-//         "id": 10749,
-//         "name": "Romance"
-            // if rainy
-//     },
-//     {
-//         "id": 878,
-//         "name": "Science Fiction"
-            // If else
-//     },
-//     {
-//         "id": 10770,
-//         "name": "TV Movie"
-//     },
-//     {
-//         "id": 53,
-//         "name": "Thriller"
-            // If past 9
-//     },
-//     {
-//         "id": 10752,
-//         "name": "War"
-            // If cold
-//     },
-//     {
-//         "id": 37,
-//         "name": "Western"
-            // If else
-//     }
-// ]
-// }
+movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=9bfe03956c9070cdbcee94fe9384e956&language=en-US&sort_by=popularity.desc&include_adult=false&page=1&vote_average.gte=7&with_genres=" + genreString
+
+$.ajax({
+    url: movieURL,
+    method: "GET",
+}).then(function (response) {
+    console.log(movieURL)
+    console.log(response)
+    var randomInt = Math.floor((Math.random() * 20) + 1);
+    console.log(randomInt)
+})
+// That var is ran through and if else statement assigning it a movie genre
+// Run an API pull on the assigned genre
+// Random number generate to produce a movie from the top rated results
+// Display the movie information on the homepage. 
+
+// Settings
+
+// Trending
+function generateTrending() {
+    var queryUrl = "https://api.themoviedb.org/3/trending/all/day?api_key=9bfe03956c9070cdbcee94fe9384e956"
+
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response)
+    })
+
+}
+// Clicking the trending button will randomly generate a trending movie/tv show
