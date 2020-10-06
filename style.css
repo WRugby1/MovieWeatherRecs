@@ -1,0 +1,16 @@
+header {
+    text-align: center;
+}
+
+.stats h3 {
+    text-align: left;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
