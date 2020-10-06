@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flicks on Flicks on Flicks</title>
-    <link rel="stylesheet" href="style.css" type="text/css" >
+    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 </head>
+
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
@@ -16,35 +19,66 @@
         <div class="row">
             <div class="cols12">
                 <header>
-                    <h1>Meteorology and Motion Pictures</h1>
+                    <h2>Meteorology and Motion Pictures</h2>
                 </header>
-          </div>
-        </div> <!--Close the main heading row-->
+            </div>
+        </div>
+        <!--Close the main heading row-->
 
         <main>
-            <section class="stats">
-                <h3>City:</h3>
-                <h3>Temperature:</h3>
-                <h3>Humidity:</h3>
-                <h3>Sky:</h3>
-            </section>
-            <section>
-            <h3>Local Time:</h3>
-            <h3>Date:</h3>
-            </section>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card blue darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Weather stats</span>
+                                <ul>
+                                    <li>City:</li>
+                                    <li>Temperature:</li>
+                                    <li>Humidity:</li>
+                                    <li>Sky:</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card blue darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Location Info</span>
+                                <ul>
+                                    <li>Local Time:</li>
+                                    <li>Date:</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <br>
-            <section>
-                <h3>Details:</h3>
-                <h3>Movie #</h3>
-            </section>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card blue darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Location Info</span>
+                                <ul>
+                                    <li>Details:</li>
+                                    <li>Movie:</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
             <section>
                 <div class="wrapper">
                     <button class="button">Movies</button>
                 </div>
-            </section>  
+            </section>
         </main>
-    </div>  
+    </div>
 
 
 </body>
+
 </html>
