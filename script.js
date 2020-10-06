@@ -9,7 +9,7 @@ $.ajax({
 
 
 //Location
-if ("geolocation" in navigator){ //check geolocation available 
+//if ("geolocation" in navigator){ //check geolocation available 
     //try to get user current location using getCurrentPosition() method
     navigator.geolocation.getCurrentPosition(function(position){ 
         var latitude = position.coords.latitude;    
@@ -29,7 +29,7 @@ if ("geolocation" in navigator){ //check geolocation available
         var humidityCity = response.main.humidity;
         var windCity = response.wind.speed;
 
-       var divLocation = (".stats");
+       var divLocation = $(".stats");
 
         var nameC = $("<h1>").text(nameCity);
         divLocation.append(nameC);  
@@ -45,7 +45,7 @@ if ("geolocation" in navigator){ //check geolocation available
 
         var windC = $("<h3>").text( "Wind"+windCity+"m/h");
         divLocation.append(windC);  
-
      
-
     })
+})
+//}
