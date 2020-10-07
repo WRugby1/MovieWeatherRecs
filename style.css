@@ -1,5 +1,7 @@
-header {
+#h2Style {
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(224, 223, 235);
 }
 .body-rain {
     background-image: URL("rain.gif");
@@ -32,11 +34,34 @@ header {
     height: 100%;
 }
 
-.stats h3 {
-    text-align: left;
-}
 
 .wrapper {
     text-align: center;
 }
 
+#newStyle{
+    border-radius: 50px;
+    background: linear-gradient(315deg, #7da6c4, #95c5e9);
+    box-shadow:  -9px -9px 20px #486071, 
+                 9px 9px 20px #ceffff;
+   }
+
+#newStyle2{
+    border-radius: 50px;
+    background: linear-gradient(315deg, #c4a37d, #e9c295);
+    box-shadow:  -9px -9px 20px #715e48, 
+                 9px 9px 20px #ffffce;
+      }
+
+
+#generate-movie{
+    border-radius: 79px;
+    background: linear-gradient(315deg, #5073ad, #5f89cd);
+    box-shadow:  -9px -9px 20px #446192, 
+                  9px 9px 20px #6e9fee;
+}      
+
+
+.fondoStyle{
+  background-color: rgb(248, 196, 150);
+}
