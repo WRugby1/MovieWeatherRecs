@@ -55,8 +55,8 @@ if ("geolocation" in navigator) {
             timeDateCityEl.append(todayEl);
             timeDateCityEl.append(hourEl);
             // Depending on the weather category, assign the genres that we think are suited for that weather
-            var weatherCat = "Snow"
-            // var weatherCat = response.weather[0].main
+            // var weatherCat = "Snow"
+            var weatherCat = response.weather[0].main
             console.log(weatherCat)
             // Possible main options: Thunderstorm, Drizzle, Rain, Snow, Clear, Clouds
             if (weatherCat === "Clear") {
