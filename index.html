@@ -31,62 +31,62 @@
         </div>
         <!--Close the main heading row-->
 
-        <main>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card blue darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Weather stats</span>
-                                <ul>
-                                    <li>City:</li>
-                                    <li>Temperature:</li>
-                                    <li>Humidity:</li>
-                                    <li>Sky:</li>
-                                </ul>
+      <div class="container">
+         <div class="row">
+        
+          
+               <div class="col s12 m7">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSNdmezoO2li0YpBhMbsu7spxc09bSX-hMNA&usqp=CAU">
+                    <span id="cityEl" class="card-title"></span>
+                  </div>      
+                   <div class="card-stacked">
+                       <div id="infoC" class="card-content">
+                          <ul id="infoCity" ></ul>
+                       </div>
+                        <div id="linkCity" class="card-action">
+                          <a target="_blank" href="https://www.doordash.com/en-US/?utm_source=Bing&utm_medium=SEMb&utm_campaign=CX_US_SE_SB_BI_ACQ_TCTXXX_386526259_+BR_ACQ_INMKT_GenDeliveryxx_EVG_CPAx_EXA_TZCST_EN_EN_X_DOOR_BN_SE_TXT_XXXXXXXXXX&utm_term=doordash&utm_content=1210562747190099&kclickid=_k_5707716c131a148cf7ff2e11f15d0c31_k_&utm_adgroup_id=1210562747190099&utm_creative_id=&utm_keyword_id=kwd-75660489490461:loc-4126&msclkid=5707716c131a148cf7ff2e11f15d0c31">Order food </a>
                         </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card blue darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Location Info</span>
-                                <ul>
-                                    <li>Local Time:</li>
-                                    <li>Date:</li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card blue darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Location Info</span>
-                                <ul>
-                                    <li>Details:</li>
-                                    <li>Movie:</li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                 </div>
+            
 
             
-        <!--Button -->
-            <section>
-                <div class="wrapper">
-                    <button class="button">Movies</button>
-                </div>
-            </section>
-        </main>
+                  <div class="col s12 m7">
+                    <div class="card">
+                      <div class="card-image">
+                        <img  src="data:image/jpeg;base64,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" >
+                        <span id="timeEl" class="card-title"></span>
+                      </div>      
+                       <div class="card-stacked">
+                           <div class="card-content">
+                              <ul id="timeDateCity" ></ul>
+                           </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+           
+
+
+
+
+         </div>
+         <div class="row"> <!--Button-->
+             <div class="col s12">
+             <button id="generate-movie" class="button waves-effect waves-light btn-large pulse">MOVIE</button>
+            </div>
+         </div>
+         <div class="row">
+             <h1>Details Movie</h1>
+         </div>
     </div>
 
- <!-- Maaterialize with JavaScript -->
+       
+
+ <!-- Materialize with JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
 </body>
