@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flicks on Flicks on Flicks</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!-- Moment-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js" integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg==" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"
+        integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg=="
+        crossorigin="anonymous"></script>
 
 </head>
 
@@ -34,12 +38,12 @@
                     <div class="card blue darken-1">
                         <div class="card-content white-text">
                             <span class="card-title">Weather stats</span>
-                                <ul>
-                                    <li>City:</li>
-                                    <li>Temperature:</li>
-                                    <li>Humidity:</li>
-                                    <li>Sky:</li>
-                                </ul>
+                            <ul>
+                                <li>City:</li>
+                                <li>Temperature:</li>
+                                <li>Humidity:</li>
+                                <li>Sky:</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -50,25 +54,27 @@
                     <div class="card blue darken-1">
                         <div class="card-content white-text">
                             <span class="card-title">Location Info</span>
-                                <ul>
-                                    <li>Local Time:</li>
-                                    <li>Date:</li>
-                                </ul>
+                            <ul>
+                                <li>Local Time:</li>
+                                <li>Date:</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
-            <section>
-                <h3>Details:</h3>
-                <h3 id= "movie-name">Movie #</h3>
-                <img id = "movie-poster" src = "">
-            </section>
-            <section>
-                <div class="wrapper">
-                    <button id= "generate-movie" class="button">Movies</button>
-                </div>
-            </section>
+            <div id="movie-block">
+                <section>
+                    <img id="movie-poster" src="">
+                </section>
+                <section>
+                    <div class="wrapper">
+                        <button type="button" id="generate-movie" class="button">Give me a movie to fit the
+                            mood!</button>
+                        <button type="button" id="generate-trending" class="button">Show me what's trending!</button>
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
 

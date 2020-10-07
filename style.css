@@ -1,6 +1,36 @@
 header {
     text-align: center;
 }
+.body-rain {
+    background-image: URL("rain.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-clear {
+    background-image: URL("clear.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-cloudy {
+    background-image: URL("cloudy.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-thunder {
+    background-image: URL("thunder.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-snow {
+    background-image: URL("snow.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
 
 .stats h3 {
     text-align: left;
