@@ -1,5 +1,5 @@
 var queryUrl = "https://api.themoviedb.org/3/trending/all/day?api_key=9bfe03956c9070cdbcee94fe9384e956"
-var genreString = ""
+//var genreString = ""
 $.ajax({
     url: queryUrl,
     method: "GET"
@@ -7,42 +7,82 @@ $.ajax({
     console.log(response)
 })
 
-navigator.geolocation.getCurrentPosition(function (position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
+
+//Location - check geolocation available
+if ("geolocation" in navigator){  
+    //try to get user current location using getCurrentPosition() method
+    navigator.geolocation.getCurrentPosition(function(position){ 
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
 
 
-    var urlCoor = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=99301d0cd337422b7e967fbf9be0bf70";
-    $.ajax({
-        url: urlCoor,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response)
-
-        var nameCity = response.name;
-        var tempCity = response.main.temp;
-        var feelCity = response.main.feels_like;
-        var humidityCity = response.main.humidity;
-        var windCity = response.wind.speed;
+        var urlCoor = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=99301d0cd337422b7e967fbf9be0bf70";
 
 
-        var divLocation = $(".stats");
+        $.ajax({
+            url: urlCoor,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response)
 
-        var nameC = $("<h1>").text(nameCity);
-        divLocation.append(nameC);
+            var nameCity = response.name;
+            var tempCity = response.main.temp;
+            var feelCity = response.main.feels_like;
+            var humidityCity = response.main.humidity;
+            var windCity = response.wind.speed;
+            var skyCity = response.weather[0].description;
+    
+         //Showing results in html
+            var ulInfoCity = $("#infoCity");
+            var cityHeader = $("#cityEl").text(nameCity);
 
-        var tempC = $("<h3>").text("Temperature: " + tempCity + " F");
-        divLocation.append(tempC);
+            var tempC = $("<li>").text("Temperature: " + tempCity + " F");
+            ulInfoCity.append(tempC);
+    
+            var feelC = $("<li>").text("Feels like: " + feelCity + "F");
+            ulInfoCity.append(feelC);
+    
+            var humC = $("<li>").text("Humidity: " + humidityCity + "%");
+            ulInfoCity.append(humC);
+    
+            var windC = $("<li>").text("Wind: " + windCity + "m/h");
+            ulInfoCity.append(windC);
+    
+            var skyC = $("<li>").text("Sky " + skyCity );
+            ulInfoCity.append(skyC);
 
-        var feelC = $("<h3>").text("Feels like: " + feelCity + "F");
-        divLocation.append(feelC);
+            
 
-        var humC = $("<h3>").text("Humidity: " + humidityCity + "%");
-        divLocation.append(humC);
 
-        var windC = $("<h3>").text("Wind: " + windCity + "m/h");
-        divLocation.append(windC);
+            //Date and time
+            var today = moment().format('LL');
+            var hour = moment().format('LT');
+            var timeDateCityEl = $("#timeDateCity");
 
+            var todayEl = $("<li>").text(today);
+            var hourEl = $("<li>").text(hour);
+            timeDateCityEl.append(todayEl);
+            timeDateCityEl.append(hourEl);
+
+
+
+        }) // end Ajax function
+
+      }); // end function geolocation
+}else{ //if the browser doesnt support geolocation 
+    console.log("Browser doesn't support geolocation!");
+} // end geolocation
+
+
+
+
+
+
+
+
+
+
+/*
         var weatherCat = response.weather[0].main
         console.log(weatherCat)
         if (weatherCat.toString() === "sunny") {
@@ -54,13 +94,13 @@ navigator.geolocation.getCurrentPosition(function (position) {
         else if (weatherCat === "raining") {
             genreString = "80|2C99|2C10749"
         }
-        else () => {
+        else   {
             genreString = "14|2C878|2C37"
-        }
-    })
-})
+        }*/
+    
 
-function generateMovie() {
+
+/*function generateMovie() {
     var movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=9bfe03956c9070cdbcee94fe9384e956&language=en-US&append_to_response=images&include_image_language=en&sort_by=popularity.desc&include_adult=false&page=1&vote_average.gte=7&with_genres=" + genreString
 
 
@@ -100,5 +140,4 @@ function generateTrending() {
         console.log(response)
     })
 
-}
-// Clicking the trending button will randomly generate a trending movie/tv show
+}*/
