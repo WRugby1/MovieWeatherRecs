@@ -2,7 +2,36 @@
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(224, 223, 235);
-    
+}
+.body-rain {
+    background-image: URL("rain.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-clear {
+    background-image: URL("clear.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-cloudy {
+    background-image: URL("cloudy.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-thunder {
+    background-image: URL("thunder.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-snow {
+    background-image: URL("snow.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
 }
 
 
@@ -30,7 +59,15 @@
     background: linear-gradient(315deg, #5073ad, #5f89cd);
     box-shadow:  -9px -9px 20px #446192, 
                   9px 9px 20px #6e9fee;
-}      
+}
+
+#generate-trending{
+    border-radius: 79px;
+    background: linear-gradient(315deg, #5073ad, #5f89cd);
+    box-shadow:  -9px -9px 20px #446192, 
+                  9px 9px 20px #6e9fee;
+}
+
 
 
 .fondoStyle{

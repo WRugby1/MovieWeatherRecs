@@ -8,7 +8,8 @@
     <link rel="icon" href="https://i.pinimg.com/736x/fb/45/ba/fb45baac1eed3c1b19d4aad23b054fa8.jpg">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!-- Moment-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js" integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg==" crossorigin="anonymous"></script>
      <!-- Materialize -->
@@ -21,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 
-    <div class="container">
+    <div id="movie-block" class="container">
         <!--The title/heading of our page-->
         <div class="row">
             <div class="cols12">
@@ -76,13 +77,21 @@
 
          </div>
          <div class="row"> <!--Button-->
-             <div class="col s12">
-             <button id="generate-movie" class=" waves-effect waves-light btn-large pulse">MOVIE</button>
+             
+            <br>
+            <div>
+                <section>
+                    <img id="movie-poster" src="">
+                </section>
+                <section>
+                    <div class="wrapper">
+                        <button type="button" id="generate-movie" class="button">Give me a movie to fit the
+                            mood!</button>
+                        <button type="button" id="generate-trending" class="button">Show me what's trending!</button>
+                    </div>
+                </section>
             </div>
-         </div>
-         <div class="row">
-             <h1>Details Movie</h1>
-         </div>
+        </main>
     </div>
 
        
