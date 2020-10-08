@@ -6,9 +6,7 @@ if ("geolocation" in navigator) {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
 
-
         var urlCoor = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=99301d0cd337422b7e967fbf9be0bf70";
-
 
         $.ajax({
             url: urlCoor,
@@ -17,24 +15,12 @@ if ("geolocation" in navigator) {
             console.log(response)
 
             var nameCity = response.name;
-            var tempCity = response.main.temp;
-            var humidityCity = response.main.humidity;
-            var skyCity = response.weather[0].description;
             //get image/ico
 
             //Showing results in html
             var ulInfoCity = $("#infoCity");
             var cityHeader = $("#cityHeader");
             cityHeader.text(nameCity);
-
-            var tempC = $("<li>").text("Temp :  " + tempCity + " F");
-            ulInfoCity.append(tempC);
-
-            var humC = $("<li>").text("Humidity: " + humidityCity + "%");
-            ulInfoCity.append(humC);
-
-            var skyC = $("<li>").text("Sky " + skyCity);
-            ulInfoCity.append(skyC);//get image
 
             //Date and time
             var today = moment().format('LL');
@@ -106,17 +92,17 @@ function generateMovie() {
         console.log(randomInt)
         var screenSize = ""
         console.log(window.screen.availWidth)
-        if (window.screen.availHeight > 1000) {
-            screenSize = "w780"
-        }
-        else if (window.screen.availHeight > 800) {
+        if (window.screen.availWidth > 1000) {
             screenSize = "w500"
         }
-        else if (window.screen.availHeight > 600) {
-            screenSize = "w342"
+        else if (window.screen.availWidth > 800) {
+            screenSize = "w500"
+        }
+        else if (window.screen.availWidth > 600) {
+            screenSize = "w500"
         }
         else {
-            screenSize = "w342"
+            screenSize = "w500"
         }
         var posterURL = "https://image.tmdb.org/t/p/" + screenSize + response.results[randomInt].poster_path
         console.log(response.results[randomInt].poster_path)
@@ -137,17 +123,17 @@ function generateTrending() {
         console.log(randomIntTrend)
         var screenSize = ""
         console.log(window.screen.availWidth)
-        if (window.screen.availHeight > 1000) {
-            screenSize = "w780"
-        }
-        else if (window.screen.availHeight > 800) {
+        if (window.screen.availWidth > 1000) {
             screenSize = "w500"
         }
-        else if (window.screen.availHeight > 600) {
-            screenSize = "w342"
+        else if (window.screen.availWidth > 800) {
+            screenSize = "w500"
+        }
+        else if (window.screen.availWidth > 600) {
+            screenSize = "w500"
         }
         else {
-            screenSize = "w342"
+            screenSize = "w500"
         }
         var posterURL = "https://image.tmdb.org/t/p/" + screenSize + response.results[randomIntTrend].poster_path
         console.log(response.results[randomIntTrend].poster_path)
