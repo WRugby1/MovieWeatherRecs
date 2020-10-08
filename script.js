@@ -18,45 +18,37 @@ if ("geolocation" in navigator) {
 
             var nameCity = response.name;
             var tempCity = response.main.temp;
-            var feelCity = response.main.feels_like;
             var humidityCity = response.main.humidity;
-            var windCity = response.wind.speed;
             var skyCity = response.weather[0].description;
+            //get image/ico
 
             //Showing results in html
             var ulInfoCity = $("#infoCity");
-            var cityHeader = $("#cityEl").text(nameCity);
+            var cityHeader = $("#cityHeader");
+            cityHeader.text(nameCity);
 
-            var tempC = $("<li>").text("Temperature: " + tempCity + " F");
+            var tempC = $("<li>").text("Temp :  " + tempCity + " F");
             ulInfoCity.append(tempC);
 
-            var feelC = $("<li>").text("Feels like: " + feelCity + "F");
-            ulInfoCity.append(feelC);
 
             var humC = $("<li>").text("Humidity: " + humidityCity + "%");
             ulInfoCity.append(humC);
 
-            var windC = $("<li>").text("Wind: " + windCity + "m/h");
-            ulInfoCity.append(windC);
 
             var skyC = $("<li>").text("Sky " + skyCity);
-            ulInfoCity.append(skyC);
-
-
-
+            ulInfoCity.append(skyC);//get image
 
             //Date and time
             var today = moment().format('LL');
             var hour = moment().format('LT');
-            var timeDateCityEl = $("#timeDateCity");
+            var timeDate = $("#timeHour");
 
-            var todayEl = $("<li>").text(today);
-            var hourEl = $("<li>").text(hour);
-            timeDateCityEl.append(todayEl);
-            timeDateCityEl.append(hourEl);
+            timeDate.text(today  +"  " +  hour);
+
+
             // Depending on the weather category, assign the genres that we think are suited for that weather
-            var weatherCat = "Snow"
-            // var weatherCat = response.weather[0].main
+            // var weatherCat = "Snow"
+            var weatherCat = response.weather[0].main
             console.log(weatherCat)
             // Possible main options: Thunderstorm, Drizzle, Rain, Snow, Clear, Clouds
             if (weatherCat === "Clear") {
@@ -115,7 +107,21 @@ function generateMovie() {
         console.log(response)
         var randomInt = Math.floor((Math.random() * 19) + 1);
         console.log(randomInt)
-        var posterURL = "https://image.tmdb.org/t/p/w500" + response.results[randomInt].poster_path
+        var screenSize = ""
+        console.log(window.screen.availWidth)
+        if (window.screen.availHeight > 1000) {
+            screenSize = "w780"
+        }
+        else if (window.screen.availHeight > 800) {
+            screenSize = "w500"
+        }
+        else if (window.screen.availHeight > 600) {
+            screenSize = "w342"
+        }
+        else {
+            screenSize = "w342"
+        }
+        var posterURL = "https://image.tmdb.org/t/p/" + screenSize + response.results[randomInt].poster_path
         console.log(response.results[randomInt].poster_path)
         $("#movie-poster").attr("src", posterURL)
     })
@@ -132,8 +138,25 @@ function generateTrending() {
         console.log(response)
         var randomIntTrend = Math.floor((Math.random() * 19) + 1);
         console.log(randomIntTrend)
-        var posterURL = "https://image.tmdb.org/t/p/w500" + response.results[randomIntTrend].poster_path
+        var screenSize = ""
+        console.log(window.screen.availWidth)
+        if (window.screen.availHeight > 1000) {
+            screenSize = "w780"
+        }
+        else if (window.screen.availHeight > 800) {
+            screenSize = "w500"
+        }
+        else if (window.screen.availHeight > 600) {
+            screenSize = "w342"
+        }
+        else {
+            screenSize = "w342"
+        }
+        var posterURL = "https://image.tmdb.org/t/p/" + screenSize + response.results[randomIntTrend].poster_path
         console.log(response.results[randomIntTrend].poster_path)
         $("#movie-poster").attr("src", posterURL)
     })
 }
+
+
+// Grab screen size and then assign image size based off of screen 
