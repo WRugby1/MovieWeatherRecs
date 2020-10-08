@@ -115,7 +115,21 @@ function generateMovie() {
         console.log(response)
         var randomInt = Math.floor((Math.random() * 19) + 1);
         console.log(randomInt)
-        var posterURL = "https://image.tmdb.org/t/p/w500" + response.results[randomInt].poster_path
+        var screenSize = ""
+        console.log(window.screen.availWidth)
+        if (window.screen.availWidth > 1200) {
+            screenSize = "w780"
+        }
+        else if (window.screen.availWidth > 992) {
+            screenSize = "w500"
+        }
+        else if (window.screen.availWidth > 768) {
+            screenSize = "w342"
+        }
+        else {
+            screenSize = "w185"
+        }
+        var posterURL = "https://image.tmdb.org/t/p/" + screenSize + response.results[randomInt].poster_path
         console.log(response.results[randomInt].poster_path)
         $("#movie-poster").attr("src", posterURL)
     })
@@ -132,8 +146,25 @@ function generateTrending() {
         console.log(response)
         var randomIntTrend = Math.floor((Math.random() * 19) + 1);
         console.log(randomIntTrend)
-        var posterURL = "https://image.tmdb.org/t/p/w500" + response.results[randomIntTrend].poster_path
+        var screenSize = ""
+        console.log(window.screen.availWidth)
+        if (window.screen.availHeight > 1000) {
+            screenSize = "w780"
+        }
+        else if (window.screen.availHeight > 800) {
+            screenSize = "w500"
+        }
+        else if (window.screen.availHeight > 600) {
+            screenSize = "w342"
+        }
+        else {
+            screenSize = "w342"
+        }
+        var posterURL = "https://image.tmdb.org/t/p/" + screenSize + response.results[randomIntTrend].poster_path
         console.log(response.results[randomIntTrend].poster_path)
         $("#movie-poster").attr("src", posterURL)
     })
 }
+
+
+// Grab screen size and then assign image size based off of screen 

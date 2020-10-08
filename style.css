@@ -1,4 +1,13 @@
-
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
 #h2Style {
     color: #032121;
     font-family: 'Anton', sans-serif;
@@ -9,7 +18,8 @@
 }
 
 #inline {
-    display: inline-flex;
+    margin: auto;
+    width: 75%;
 }
 
 .body-rain {
@@ -90,10 +100,10 @@
     padding: 0px;
 }
 
-.fondoStyle{
+/* .fondoStyle{
   
   background-image: url("bk1.png");
-}
+} */
 
 .banner {
     display: block;
@@ -114,6 +124,7 @@
     bottom: auto;
     left: auto;
     right: 96px;
+    width: 100%;
 }
 
 .card-stacked {
