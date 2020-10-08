@@ -30,10 +30,8 @@ if ("geolocation" in navigator) {
             var tempC = $("<li>").text("Temp :  " + tempCity + " F");
             ulInfoCity.append(tempC);
 
-
             var humC = $("<li>").text("Humidity: " + humidityCity + "%");
             ulInfoCity.append(humC);
-
 
             var skyC = $("<li>").text("Sky " + skyCity);
             ulInfoCity.append(skyC);//get image
@@ -44,7 +42,6 @@ if ("geolocation" in navigator) {
             var timeDate = $("#timeHour");
 
             timeDate.text(today  +"  " +  hour);
-
 
             // Depending on the weather category, assign the genres that we think are suited for that weather
             // var weatherCat = "Snow"
