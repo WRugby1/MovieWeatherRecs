@@ -117,17 +117,17 @@ function generateMovie() {
         console.log(randomInt)
         var screenSize = ""
         console.log(window.screen.availWidth)
-        if (window.screen.availWidth > 1200) {
+        if (window.screen.availHeight > 1000) {
             screenSize = "w780"
         }
-        else if (window.screen.availWidth > 992) {
+        else if (window.screen.availHeight > 800) {
             screenSize = "w500"
         }
-        else if (window.screen.availWidth > 768) {
+        else if (window.screen.availHeight > 600) {
             screenSize = "w342"
         }
         else {
-            screenSize = "w185"
+            screenSize = "w342"
         }
         var posterURL = "https://image.tmdb.org/t/p/" + screenSize + response.results[randomInt].poster_path
         console.log(response.results[randomInt].poster_path)
