@@ -1,8 +1,27 @@
-#h2Style {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(224, 223, 235);
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
+body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+#h2Style {
+    color: #032121;
+    font-family: 'Anton', sans-serif;
+}
+
+#bigcard {
+    display: block;
+}
+
+#inline {
+    margin: auto;
+    width: 75%;
+}
+
 .body-rain {
     background-image: URL("rain.gif");
     background-repeat: no-repeat;
@@ -35,8 +54,8 @@
 }
 
 
-.wrapper {
-    text-align: center;
+#bottombuttons {
+    display: inline-flex;
 }
 
 .newStyle{
@@ -47,6 +66,9 @@
    }
 
 #newStyle2{
+    height: 427px;
+    padding: 20px;
+    width: 172px;
     border-radius: 50px;
     background: linear-gradient(315deg, #c4a37d, #e9c295);
     box-shadow:  -9px -9px 20px #715e48, 
@@ -55,6 +77,7 @@
 
 
 #generate-movie{
+    margin-left: 155px;
     border-radius: 79px;
     background: linear-gradient(315deg, #5073ad, #5f89cd);
     box-shadow:  -9px -9px 20px #446192, 
@@ -62,12 +85,16 @@
 }
 
 #generate-trending{
+    margin-left: 155px;
+    width: 215px;
+    height: 40px;
     border-radius: 79px;
     background: linear-gradient(315deg, #5073ad, #5f89cd);
     box-shadow:  -9px -9px 20px #446192, 
                   9px 9px 20px #6e9fee;
 }
 
+<<<<<<< HEAD
 body {margin: 0;}
       
       ul.topnav {
@@ -101,8 +128,46 @@ body {margin: 0;}
         ul.topnav li {float: none;}
       }
 
+=======
+#linkcity {
+    display: inline;
+    padding: 0px;
+}
 
+/* .fondoStyle{
+  
+  background-image: url("bk1.png");
+} */
 
+.banner {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+}
+
+.card-image {
+    height: 250px;
+}
+
+.wrapper {
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    top: 10px;
+    bottom: auto;
+    left: auto;
+    right: 96px;
+    width: 100%;
+}
+>>>>>>> f8dfb0362e54e4328fb22e5c0064c19d7a0f480d
+
+.card-stacked {
+    bottom: 50px;
+    position: relative;
+}
+
+<<<<<<< HEAD
 .fondoStyle{
   background-color: white;
 }
@@ -114,3 +179,9 @@ box-shadow:  13px -13px 37px #7b6351,
              -13px 13px 37px #e5b796;
 }
 
+=======
+.snacks {
+    display: inline-block;
+    padding: 0px;
+}
+>>>>>>> f8dfb0362e54e4328fb22e5c0064c19d7a0f480d
