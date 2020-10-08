@@ -59,7 +59,15 @@
     background: linear-gradient(315deg, #5073ad, #5f89cd);
     box-shadow:  -9px -9px 20px #446192, 
                   9px 9px 20px #6e9fee;
-}      
+}
+
+#generate-trending{
+    border-radius: 79px;
+    background: linear-gradient(315deg, #5073ad, #5f89cd);
+    box-shadow:  -9px -9px 20px #446192, 
+                  9px 9px 20px #6e9fee;
+}
+
 
 
 .fondoStyle{
