@@ -7,7 +7,7 @@ if ("geolocation" in navigator) {
         var longitude = position.coords.longitude;
 
 
-        var urlCoor = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=99301d0cd337422b7e967fbf9be0bf70";
+        var urlCoor = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=99301d0cd337422b7e967fbf9be0bf70";
 
 
         $.ajax({
