@@ -1,51 +1,8 @@
 # Project1
- 
-    {
-      "id": 14,
-      "name": "Fantasy"
-    },
-    {
-      "id": 36,
-      "name": "History"
-    },
-   
-    {
-      "id": 10402,
-      "name": "Music"
-    },
- 
-    {
-      "id": 878,
-      "name": "Science Fiction"
-    },
-    {
-      "id": 10770,
-      "name": "TV Movie"
-    },
 
-    {
-      "id": 10752,
-      "name": "War"
-    },
+I remember weather days growing up meant hopefully missing school. Now, bad weather usually means I’m not leaving the house and it’s TV time. Well if you were like me the first 2 weeks of the 2020 lockdown you watched and rewatched everyone of your favorite shows and movies. Now usually when the weather has me in a movie mood I’m scrolling through my streaming services only to find myself rewatching “The Office” for the 1000th time. Well with the help of our Application “Hurri-Cannes”, it does the searching for you. You don’t have to have the bad weather blues to use our app. It takes your local weather and suggests options for you. Whether its raining, snowing, or sunny. We got you. You can also see what movies are trending. Pair our suggestion with your favorite restaurant or snacks and ease your stay at home woes. 
 
-  ]
-}
+Our app uses the Openweather API and the TMDB API to reccomend movies that will fit your mood depending on how sunny or gloomy the weather is in your area. 
 
-Clear: action 28; adventure 12; War 10752; 
-C80%2C99%2C10749%2C27%2C9648%2C53%2C35%2C18%2C37%2C16%2C10751%2C14%2C36%2C10402%2C878%2C10770%2C10752
-
-Thunderstorm: Crime 80; Documentary 99; Romance 10749; 
-28%2C12%2C10752%2C27%2C9648%2C53%2C35%2C18%2C37%2C16%2C10751%2C14%2C36%2C10402%2C878%2C10770%2C10752
-
-Rain: Horror 27; Mystery 9648; Thriller 53; 
-28%2C12%2C10752%2C80%2C99%2C10749%2C35%2C18%2C37%2C16%2C10751%2C14%2C36%2C10402%2C878%2C10770%2C10752
-
-Snow: Comedy 35; Drama 18; Western 37;
-28%2C12%2C10752%2C80%2C99%2C10749%2C27%2C9648%2C53%2C16%2C10751%2C14%2C36%2C10402%2C878%2C10770%2C10752
-
-Clouds: animation 16; family 10751; 
-28%2C12%2C10752%2C80%2C99%2C10749%2C27%2C9648%2C53%2C35%2C18%2C37%2C14%2C36%2C10402%2C878%2C10770%2C10752
-
-Else: Fantasy 14; History 36; Music 10402; Scifi 878; tv movie 10770; war 10752
-
-28%2C12%2C10752%2C80%2C99%2C10749%2C27%2C9648%2C53%2C35%2C18%2C37%2C16%2C10751
+# Deployed app
+<img src = "deploment.png" alt = "Homepage">
