@@ -93,7 +93,7 @@ function generateMovie() {
         var screenSize = ""
         console.log(window.screen.availWidth)
         if (window.screen.availWidth > 1000) {
-            screenSize = "w500"
+            screenSize = "w780"
         }
         else if (window.screen.availWidth > 800) {
             screenSize = "w500"
@@ -124,7 +124,7 @@ function generateTrending() {
         var screenSize = ""
         console.log(window.screen.availWidth)
         if (window.screen.availWidth > 1000) {
-            screenSize = "w500"
+            screenSize = "w780"
         }
         else if (window.screen.availWidth > 800) {
             screenSize = "w500"
