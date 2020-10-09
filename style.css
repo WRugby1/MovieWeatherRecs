@@ -11,14 +11,6 @@ body {
     padding: 0;
     margin: auto;
 }
-#h2Style {
-    color: #032121;
-    font-family: 'Anton', sans-serif;
-}
-
-#bigcard {
-    display: block;
-}
 
 #inline {
     margin: auto;
@@ -112,10 +104,7 @@ body {
     padding: 0px;
 }
 
-/* .fondoStyle{
-  
-  background-image: url("bk1.png");
-} */
+
 
 .banner {
     display: block;
@@ -124,9 +113,7 @@ body {
     height: 250px;
 }
 
-.card-image {
-    height: 250px;
-}
+
 
 .wrapper {
     padding: 20px;
@@ -139,15 +126,8 @@ body {
     width: 100%;
 }
 
-.card-stacked {
-    bottom: 50px;
-    position: relative;
-}
 
 
-.fondoStyle{
-  background-color: white;
-}
 
 #newstyle{
     border-radius: 69px;
@@ -175,6 +155,8 @@ box-shadow:  13px -13px 37px #7b6351,
     bottom: 0;
     width: 100%;
     text-align: center;
+    color: white;
+    font-size: large;
 }
 
 .foodphotos {
