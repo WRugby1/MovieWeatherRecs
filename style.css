@@ -1,0 +1,191 @@
+html { 
+    padding: 0;
+    height: 100vh;
+  }
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.container-fluid {
+    padding: 0;
+    margin: auto;
+}
+
+#inline {
+    margin: auto;
+    width: 75%;
+}
+
+.body-rain {
+    background-image: URL("rain.gif");
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-clear {
+    background-image: URL("clear.gif");
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-cloudy {
+    background-image: URL("cloudy.gif");
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-thunder {
+    background-image: URL("thunder.gif");
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.body-snow {
+    background-image: URL("snow.gif");
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+
+#bottombuttons {
+    display: inline;
+}
+
+.newStyle{
+    background: linear-gradient(315deg, #7da6c4, #95c5e9);
+    box-shadow:  -9px -9px 20px #486071, 
+                 9px 9px 20px #ceffff;
+                
+   }
+
+#newStyle2{
+    height: 427px;
+    padding: 20px;
+    width: 172px;
+    border-radius: 50px;
+    background: linear-gradient(315deg, #c4a37d, #e9c295);
+    box-shadow:  -9px -9px 20px #715e48, 
+                 9px 9px 20px #ffffce;
+      }
+
+
+#generate-movie{
+    width: 215px;
+    height: 40px;
+    border-radius: 79px;
+    background: linear-gradient(315deg, #5073ad, #5f89cd);
+    box-shadow:  -9px -9px 20px #446192, 
+                  9px 9px 20px #6e9fee;
+}
+
+#generate-trending{
+    width: 215px;
+    height: 40px;
+    border-radius: 79px;
+    background: linear-gradient(315deg, #5073ad, #5f89cd);
+    box-shadow:  -9px -9px 20px #446192, 
+                  9px 9px 20px #6e9fee;
+}
+
+#linkcity {
+    display: inline;
+    padding: 0px;
+}
+
+
+
+.banner {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+}
+
+
+
+.wrapper {
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    top: 10px;
+    bottom: auto;
+    left: auto;
+    right: 96px;
+    width: 100%;
+}
+
+
+
+
+#newstyle{
+    border-radius: 69px;
+background: #b08d73;
+box-shadow:  13px -13px 37px #7b6351, 
+             -13px 13px 37px #e5b796;
+}
+
+
+.snacks {
+    display: inline-block;
+    padding: 0px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.header {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+
+.foodphotos {
+    float: left;
+    width: 10%;
+    padding: 0px;
+}
+
+figure {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.photorow::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (min-width: 768px) {
+    .foodphotos {
+        width: 22%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .foodphotos {
+        width: 25%;
+    }
+}
+/* ul {
+    margin: 0;
+} */
