@@ -1,4 +1,5 @@
 
+
 //Location - check geolocation available
 if ("geolocation" in navigator) {
     //try to get user current location using getCurrentPosition() method
@@ -143,3 +144,4 @@ function generateTrending() {
 
 
 // Grab screen size and then assign image size based off of screen 
+
